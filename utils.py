@@ -26,7 +26,7 @@ def make_plot(titles: list, images: list, save_plot: str = None, show_plot=False
 
 # matplotlib rcParams를 설정
 def set_matplotlib_rcparams():
-    plt.rcParams['figure.figsize'] = (18, 9.5)
+    plt.rcParams['figure.figsize'] = (18.5, 9.8)
     plt.rcParams['figure.autolayout'] = True
     plt.rcParams['xtick.bottom'] = False
     plt.rcParams['xtick.labelbottom'] = False
