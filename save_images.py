@@ -4,8 +4,8 @@ import tqdm
 import utils
 
 # 디렉토리 설정
-root = 'D:/demo'
-save_dir = 'images'
+root = 'images'
+save_dir = 'output'
 os.makedirs(save_dir, exist_ok=True)
 
 # 이미지 경로 가져오기
