@@ -12,8 +12,11 @@ def load_config():
 
 
 # 이미지 경로를 가져옴
-def get_image_path(root: str, sub_dir: str):
-    paths = glob.glob(os.path.join(root, sub_dir, '*'))
+def get_image_path(root: str, sub_dir: str = None):
+    if sub_dir is not None:
+        paths = glob.glob(os.path.join(root, sub_dir, '*.png'))
+    else:
+        paths = glob.glob(os.path.join(root, '*.png'))
     paths.sort()
     return paths
 
