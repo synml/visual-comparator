@@ -1,0 +1,3 @@
+root: images
+cluster_dir: clustered_images
+selection_dir: selections

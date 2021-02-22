@@ -4,15 +4,14 @@ import tqdm
 import utils
 
 # 디렉토리 설정
-root = 'images'
-save_dir = 'output'
-os.makedirs(save_dir, exist_ok=True)
+config = utils.load_config()
+os.makedirs(config['cluster_dir'], exist_ok=True)
 
 # 이미지 경로 가져오기
-paths_input_image = utils.get_image_path(root, 'input_image')
-paths_groundtruth = utils.get_image_path(root, 'groundtruth')
-paths_conventional = utils.get_image_path(root, 'conventional')
-paths_proposed = utils.get_image_path(root, 'proposed')
+paths_input_image = utils.get_image_path(config['root'], 'input_image')
+paths_groundtruth = utils.get_image_path(config['root'], 'groundtruth')
+paths_conventional = utils.get_image_path(config['root'], 'conventional')
+paths_proposed = utils.get_image_path(config['root'], 'proposed')
 assert len(paths_input_image) == len(paths_groundtruth) == len(paths_conventional) == len(paths_proposed)
 
 # matplotlib rcParams 설정
@@ -31,4 +30,4 @@ for paths in tqdm.tqdm(zip_iter, total=len(paths_input_image)):
     image_name = os.path.split(paths[0])[-1]
     titles = ['Input image ({})'.format(image_name), 'Groundtruth', 'Conventional', 'Proposed']
     images = [input_image, groundtruth, conventional, proposed]
-    utils.make_plot(titles, images, os.path.join(save_dir, image_name))
+    utils.make_plot(titles, images, os.path.join(config['cluster_dir'], image_name))

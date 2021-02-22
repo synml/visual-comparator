@@ -1,6 +1,14 @@
 import glob
 import os
 import matplotlib.pyplot as plt
+import yaml
+
+
+# 설정파일 불러오기
+def load_config():
+    with open('config.yaml') as f:
+        config = yaml.safe_load(f)
+    return config
 
 
 # 이미지 경로를 가져옴
