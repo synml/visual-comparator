@@ -1,2 +1,2 @@
-# qualitative-evaluator
- Qualitative evaluator of conventional method and proposed method
+# visual-comparator
+ Visual comparator of conventional method and proposed method
