@@ -1,6 +1,7 @@
 .idea/
 clustered_images/
 images/
+selection/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
